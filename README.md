@@ -128,13 +128,14 @@ completion = jamai.add_table_rows(
     )
 )
 
-#References
+```
+
+# References
 
 Spoonacular:
 https://spoonacular.com/food-api/docs
 
 JamaiBase:
 https://docs.jamaibase.com/
-```
 
 ---
