@@ -9,17 +9,17 @@ import re
 # Initialize Flask app
 app = Flask(__name__)
 
-jamai = JamAI(api_key="jamai_sk_fe480cff5e51d9a9ed27d5aed49711a478d340e0cabfa591", project_id="proj_f237e2312779764a4d37aaf0")
+jamai = JamAI(api_key="", project_id="")
 
 # Roboflow Client Configuration
 CLIENT = InferenceHTTPClient(
-    api_url="https://detect.roboflow.com",
-    api_key="1GbcjpUsROnys8WW0waw"
+    api_url="",
+    api_key=""
 )
 MODEL_ID = "fruits-and-vegetables-2vf7u/1"
 
 # Spoonacular API Configuration
-SPOONACULAR_API_KEY = "f4b626c1bb2b42e697e3b59f83bb703d"
+SPOONACULAR_API_KEY = ""
 SPOONACULAR_API_URL = "https://api.spoonacular.com/recipes/complexSearch"
 
 @app.route('/')
