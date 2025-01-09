@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        p, div {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        a {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Suitability Analysis</h1>
+        
+        <h2>Recipe Summary:</h2>
+        <p>{{ recipe_summary }}</p>
+
+        <h3>Analysis Result:</h3>
+        <div>
+            {{ suitability|safe }}
+        </div>
+
+        <a href="/">Go back to upload page</a>
+    </div>
+</body>
+</html>

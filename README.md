@@ -1,5 +1,3 @@
-# Recpanalyze
-
 # README for Recipe Recommendation System
 
 # Overview
