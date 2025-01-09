@@ -22,6 +22,14 @@ This project is a **Recipe Recommendation System** that integrates machine learn
 
 ---
 
+# Limitation
+
+1. The application faces limitations due to API rate limits, which restrict the number of requests that can be made within a specific timeframe. This can result in failed operations, particularly during periods of high user activity.  
+
+2. The system's functionality is heavily dependent on the availability of external APIs, meaning any downtime or outages from the API providers will directly impact the application's performance.  
+
+3. The Spoonacular API relies on pre-existing recipe data, which may not include the latest or trending recipes. This limitation reduces the application's ability to provide fresh or unique content to users.  
+
 # Dependencies
 
 ## Python Libraries:  
@@ -110,10 +118,16 @@ params = {
 response = requests.get(SPOONACULAR_API_URL, params=params)
 ```
 
-## Analysis and Formatting
+## Analysis (JamAI)
 ```python
-formatted = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', suitability)
-formatted = formatted.replace("\\n", "\n").replace("\n", "<br>")
+completion = jamai.add_table_rows(
+    "action",
+    p.RowAddRequest(
+        table_id="Recipe",
+        data=[{"weight": weight, "height": height, "diseases": diseases, "summary": recipe_summary}]
+    )
+)
+
 ```
 
 ---
