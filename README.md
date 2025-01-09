@@ -1,4 +1,4 @@
-# README for Recipe Recommendation System
+# README for Recipe Recpanalyze
 
 # Overview
 
